@@ -55,33 +55,7 @@ class ReportsController extends Controller
 		}
 	}
 
-	//Determine if the user uses Starhub, Singtel or M1
-	public function networkOperator($no) {
-		$n = '';
-		if (preg_match('/starhub/i', $no) || preg_match('/CallZone/i', $no)) {
-			$n .= 0;
-		} else if (preg_match('/singtel/i', $no)) {
-			$n .= 1;
-		} else if (preg_match('/m1/i', $no)) {
-			$n .= 2;
-		}
-		switch ($n) {
-			case '0':
-			   $flag = 0;
-			break;
-			case '1':
-			   $flag = 1;
-			break;
-			case '2':
-			   $flag = 2;
-			break;
-			default:
-			   $flag = 0;
-			break;
-		}
-		
-		return $flag;
-	}
+	
 
 	public function getAddressFromLatLong($row, $jsonString) {
 		$str = '';
