@@ -5,9 +5,6 @@
 * Date: 20/04/2018
 */
 
-
-// src/components/Feed.js
-
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
